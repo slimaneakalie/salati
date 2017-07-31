@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="tab">
+        <button class="tablinks active" id="PrayerTimesLink">Prayer times</button>
+        <button class="tablinks" id="SettingsLink">Settings</button>
+        <button class="tablinks" id="aboutLink">About</button>
+    </div>
+
+    <div id="PrayerTimesTab" class="tabcontent activeContent">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <img src="../res/logo.png">
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Day<br/>
+                </td>
+
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="date" id="datePrayer" required="required" />
+                            </td>
+                            <td>
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr id="fajrRow">
+                <td>Fajr</td>
+                <td id="fajr"></td>
+            </tr>
+
+            <tr id="sunriseRow">
+                <td>Sunrise</td>
+                <td id="sunrise"></td>
+            </tr>
+
+            <tr id="dhuhrRow">
+                <td>Dhuhr</td>
+                <td id="dhuhr"></td>
+            </tr>
+
+            <tr id="asrRow">
+                <td>Asr</td>
+                <td id="asr"></td>
+            </tr>
+
+            <tr id="maghribRow">
+                <td>Maghrib</td>
+                <td id="maghrib"></td>
+            </tr>
+
+            <tr id="ishaRow">
+                <td>Isha</td>
+                <td id="isha"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label id="countdown">0</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="SettingsTab" class="tabcontent">
+        <table>
+            <tr>
+                <td colspan="2" class="optionClass">Place</td>
+            </tr>
+            <tr>
+                <td> <input type="radio" name="placeOption" value="automatic"> Automatic </td>
+                <td> <input type="radio" name="placeOption" value="manual"> Manual </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table id="cordonates" width="100%">
+                        <tr>
+                            <td> Longitude </td>
+                            <td> <input type="number" id="longitude" /> </td>
+                        </tr>
+
+                        <tr>
+                            <td> Latitude </td>
+                            <td> <input type="number" id="latitude" /></td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="optionClass">General settings</td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="checkbox" id="dst"> Daylight Saving Time</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td> Time format </td>
+                            <td> <input type="radio" name="timeFormat" value="24h" /> 24h </td>
+                            <td> <input type="radio" name="timeFormat" value="12h" /> 12h </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">Calculation method</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="calculMethod">
+							<option value="MWL">Muslim World League</option>
+							<option value="ISNA">Islamic Society of North America</option>
+							<option value="Egypt">	Egyptian General Authority of Survey</option>
+							<option value="Makkah">Umm al-Qura University, Makkah</option>
+							<option value="Karachi">University of Islamic Sciences, Karachi</option>
+							<option value="Tehran">	Institute of Geophysics, University of Tehran</option>
+							<option value="Jafari">Shiâ Ithna Ashari (Jaâfari)</option>
+						</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="optionClass">Notification settings</td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox" id="adhan"> Adhan </td>
+                <td> <input type="checkbox" id="notices"> Notifications </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="optionClass">Actions</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">After adhan</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="afterAdhanActions">
+							<option value="nothingAction">Do nothing</option>
+							<option value="blockNavigationAction">Block navigation</option>
+							<option value="closeBrowserAction">Close browser</option>
+						</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <elem id="blockPeriodLabel"> Block navigation period </elem>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="blockNavigationPeriod">
+							<option value="1">For 1 minute</option>
+							<option value="5">For 5 minutes</option>
+							<option value="10">For 10 minutes</option>
+							<option value="20">For 20 minutes</option>
+							<option value="30">For 30 minutes</option>
+							<option value="60">For 1 hour</option>
+						</select>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="aboutTab" class="tabcontent">
+       <p class="about">
+        <aboutTitle>Overview</aboutTitle> <br><br>
+            <b>Salati</b> is a google chrome extension that shows the prayer times for muslims.
+            <br>
+            In a prayer time <b>Salati</b> push a text notification, plays adhan and execute some actions (block internet or close browser), all this can be configured by the user using a simple user interface.
+            <br>
+            The extension uses HTML 5 features and chrome JavaScript API.
+        <br><br>
+
+        <aboutTitle>Prayer Times Calculation</aboutTitle><br><br>
+            Muslims perform five prayers a day. Each prayer is given a certain prescribed time during which it must be performed.<br>
+            The prayer calculations are based off <a class="externalLink" href="http://praytimes.org/">PrayTimes library</a> by <a class="externalLink" href="http://zarrabi.info/">Dr. Hamid Zarrabi-Zadeh</a>.
+
+        <br><br>
+
+        <aboutTitle>Authors</aboutTitle><br>
+            <ul>
+                <li>
+                    <a class="externalLink" href="https://linkedin.com/in/slimaneakalia/">Slimane Akalia</a>
+
+                </li>
+                <li>
+                    <a class="externalLink" href="https://twitter.com/faraji07">Hamza Faraji</a>
+                </li>
+            </ul>
+
+        <br>
+        <aboutTitle>Salati on github </aboutTitle>
+            <div class="githubLink">
+                <a href="https://github.com/slimaneakalia/Salati" class="externalLink">
+                    <div class="githubLogoContainer">
+                        <img class="githubLogo" src="../res/github_logo.png" width="30">
+                    </div>
+                </a>
+            </div>
+        </p>
+    </div>
+
+    <div class="copyright activeContent"> &copy; 2016 - 2017, AKALIA Slimane &amp; FARAJI Hamza</div>
+
+</body>
+
+<script type="text/javascript" src="../js/constants.js"></script>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/popup.js"></script>
+
+
+</html>

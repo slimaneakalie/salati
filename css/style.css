@@ -1,0 +1,176 @@
+body
+{
+	  min-width: 355px;
+      min-height: 503px;
+      max-height: 503px;
+	  margin: 0px;
+	  font-size: 15px;
+	  color: #545454;
+	  background-color: #f8f6f2;
+      display:block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.42857143;
+}
+
+td
+{
+	text-align: center;
+    padding: 6px;
+}
+
+a{
+    text-decoration: none
+}
+
+select, table
+{
+    width: 100%;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+aboutTitle
+{
+    font-size: 18px;
+    font-weight: bold
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-calendar:before {
+  content: "\e109";
+}
+    
+.optionClass
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.checkBox
+{
+	text-align: left;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 440px;
+    overflow: auto;
+}
+
+.activeContent
+{
+    position: absolute;
+    width: 100%;
+    display : block;
+}
+
+.copyright
+{
+    background-color: black;
+    text-align: center;
+    font-size: 9px;
+    color: white;
+    bottom: 0;
+}
+
+.about
+{
+    text-align: justify;
+    text-justify: auto;
+}
+
+.githubLogo
+{
+    vertical-align: middle
+}
+
+
+.githubLogoContainer:hover
+{
+    opacity: 0.5;
+}
+
+.githubLink
+{
+    display: inline-block;
+}
+
+#datePrayer
+{
+    width :100%;
+}
+
+#qrCode
+{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: auto;
+}
+
+#qrInstru 
+{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
