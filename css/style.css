@@ -141,7 +141,8 @@ div.tab button.active {
 
 .githubLogo
 {
-    vertical-align: middle
+    vertical-align: middle;
+    width: 30px;
 }
 
 
