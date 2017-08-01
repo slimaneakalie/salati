@@ -15,8 +15,8 @@ In a prayer time salati push a text notification, plays adhan and execute some a
 
 <p align="center">
   <div style="display: inline-block;">
-    <img src="screenshots/3.jpg" />
-    <img src="screenshots/4.jpg" />
+    <img src="screenshots/3.jpg" width="50%" />
+    <img src="screenshots/4.jpg" width="50%" />
   </div>
 </p>
 All this can be configured by the user using a simple user interface.
