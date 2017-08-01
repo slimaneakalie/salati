@@ -14,9 +14,9 @@
 In a prayer time salati push a text notification, plays adhan and execute some actions (block internet or close browser).
 
 <p align="center">
-  <div style="display: inline-block;">
-    <img src="screenshots/3.jpg" width="50%" />
-    <img src="screenshots/4.jpg" width="50%" />
+  <div style="display:table; text-align: center;">
+    <img src="screenshots/3.jpg" width="48%" style="margin-right: 10px;" />
+    <img src="screenshots/4.jpg" width="48%" />
   </div>
 </p>
 All this can be configured by the user using a simple user interface.
