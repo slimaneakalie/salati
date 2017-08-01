@@ -20,5 +20,5 @@ The prayer calculations are based off [PrayTimes library](http://praytimes.org/)
 
 
 ## Authors
-* [Slimane Akalia](https://linkedin.com/in/slimaneakalia/) (Software engineering student)
-* [Hamza Faraji](https://twitter.com/faraji07) (Software engineering student)
+* [Slimane Akalia](https://linkedin.com/in/slimaneakalia/)
+* [Hamza Faraji](https://twitter.com/faraji07)
