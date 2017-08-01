@@ -1,8 +1,11 @@
 # Salati
+
 <p align="center">
   <img src="screenshots/0.jpg" />
 </p>
+
 ## Overview
+
 **Salati** is a google chrome extension that shows the prayer times for muslims.
 <p align="center">
   <img src="screenshots/1.jpg" />
