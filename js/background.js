@@ -121,8 +121,11 @@ function updatePositionValues(placeType, latitude, longitude)
 }
 
 //Global function to update a specific configuration
-function updateConfig(key, value)
+function updateConfig(key, value, critical)
 {
+  //Set new alarm if we have a critical parameter
+  if (critical)
+    removeSetAlarm();
   //Update the configuration array
   valuesConfig[key] = value;
   //Update the local storage
@@ -151,19 +154,19 @@ function getFromStorage(key)
 
 //Functions to update a specific configuration
 function modifyNotices(checked) { updateConfig(NOTICE_ACTIVE_KEY, checked); }
-function modifyDST(checked){ updateConfig(DST_KEY, checked); }
+function modifyDST(checked){ updateConfig(DST_KEY, checked, true); }
 function modifyPlaceType(placeType){ updateConfig(PLACE_TYPE_KEY, placeType); }
 function setTimeFormat(format){ updateConfig(FORMAT_KEY, format); }
 function setCalculMethod(method)
 { 
-  updateConfig(METHOD_KEY, method);
+  updateConfig(METHOD_KEY, method, true);
   prayTimes.setMethod(method);
 }
 
 function setBlockPeriod(period){ updateConfig(BLOCK_PERIOD_KEY, period); }
 function setAction(action){ updateConfig(ACTIONS_KEY, action); }
-function setLatitude(latitude){ updateConfig(LATITUDE_KEY, latitude); }
-function setLongitude(longitude){ updateConfig(LONGITUDE_KEY, longitude); }
+function setLatitude(latitude){ updateConfig(LATITUDE_KEY, latitude, true); }
+function setLongitude(longitude){ updateConfig(LONGITUDE_KEY, longitude, true); }
 function modifyAdhan(checked)
 {
   updateConfig(AUDIO_ACTIVE_KEY, checked);

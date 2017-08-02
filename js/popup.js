@@ -4,7 +4,7 @@
 */
 
 //Global variables
-var bkg, dateField;
+var bkg, dateField, countDownInterval;
 
 //DOMContentLoaded listener
 document.addEventListener('DOMContentLoaded',initPopup);
@@ -94,7 +94,7 @@ function initCordonatesTextField()
       if (this.value.toString().length)
       {
         bkg.setLatitude(this.value);
-        refreshPrayerTimes();
+        initPrayersTabs();
       }
   };
 
@@ -103,7 +103,7 @@ function initCordonatesTextField()
       if (this.value.toString().length)
       {
         bkg.setLongitude(this.value);
-        refreshPrayerTimes();
+        initPrayersTabs();
       }
   };
 }
@@ -118,7 +118,7 @@ function popGeneral()
   dstCheckBox.onchange = function()
   {
     bkg.modifyDST(this.checked);
-    refreshPrayerTimes();
+    initPrayersTabs();
   }
   //Initialize the time format configuration
   timeFormatTab = byName(TIME_FORMAT_CLASS);
@@ -141,7 +141,7 @@ function popGeneral()
   methodSelect.onchange = function(){
     options = this.getElementsByTagName(OPTION_TAG_NAME);    
     bkg.setCalculMethod(options[this.selectedIndex].value);
-    refreshPrayerTimes();
+    initPrayersTabs();
   };
   //Check the appropriate choice
   selectOptionByValue(methodSelect, bkg.getMethod());
@@ -360,7 +360,8 @@ function setPrayerCountDown(nextPrayer)
   //Get the date in milliseconds
   var countDownDate = date_prayer.getTime();
   //Setup the countdown
-  var x = setInterval(function(){
+  clearInterval(countDownInterval);
+  countDownInterval = setInterval(function(){
       var now = new Date().getTime();
       var distance = countDownDate - now;
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -371,7 +372,7 @@ function setPrayerCountDown(nextPrayer)
       countdownElem.innerHTML = nextPrayer.prayerName.capitalize()+" after "+ hours + "h " + minutes + "m " + seconds + "s ";
       if (distance <= 0)
       {
-        clearInterval(x);
+        clearInterval(countDownInterval);
         countdownElem.innerHTML="";
         initPopup();
       }
