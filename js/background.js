@@ -1,6 +1,6 @@
 /**
  * @file This is our cool script.
- * @copyright AKALIA Slimane & FARAJI Hamza 2017
+ * @copyright AKALIA Slimane 2017
 */
 
 //Global variables
