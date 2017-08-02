@@ -14,7 +14,7 @@ var uniqueTag = 0;
 initBackground();
 
 //Function for initialize the background side
-function initBackground() 
+function initBackground()
 {
   //Initialize global arrays for parameters
   keysConfig    = [TIMEZONE_KEY, DST_KEY, FORMAT_KEY, METHOD_KEY, NOTICE_ACTIVE_KEY,

@@ -4,7 +4,7 @@
   "name": "Salati",
   "short_name" : "Salati",
   "description": "Get Accurate Prayer times",
-  "version": "1.0",
+  "version": "1.0.4.4",
 
   "permissions": [
     "alarms",
