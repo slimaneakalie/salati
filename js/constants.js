@@ -41,7 +41,7 @@ const ACTIONS_DEFAULT 		= NOTHING_ACTION;
 const BLOCK_PERIOD_DEFAULT  = 5;
 
 const GRANTED               = "granted";
-const NOTICE_ICON           = "../res/logo.png";
+const NOTICE_ICON           = "../res/noticeIcon.png";
 const AUDIO_SRC             = "../res/adhan.mp3";
 
 const DATE_FORMAT_ERROR     = "Date format error";
