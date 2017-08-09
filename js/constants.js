@@ -63,6 +63,7 @@ const METHOD_SELECT_ID   = "calculMethod";
 const ACTIONS_SELECT_ID  = "afterAdhanActions";
 const BLOCK_PERIOD_ID    = "blockNavigationPeriod";
 const BLOCK_PERIOD_LABEL_ID = "blockPeriodLabel";
+const FOOTER_ID          = 'footer';
 const OPTION_TAG_NAME    = "option";
 const CNX_TST_URL = "http://www.google.com";
 

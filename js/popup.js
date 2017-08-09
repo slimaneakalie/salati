@@ -1,6 +1,7 @@
-/**
- * @file This is our cool script.
- * @copyright AKALIA Slimane 2017
+/*
+ * Welcome crazy boy
+ * @file This is our cool script, be hungry to read it and to feel it.
+ * @copyright AKALIA Slimane
 */
 
 //Global variables
@@ -23,6 +24,8 @@ function initPopup()
   initDateField();
   //Write data into prayer times table
   initPrayersTabs();
+  //Initialize the footer
+  initFooter()
 }
 
 //Function to load settings from the background page
@@ -386,5 +389,18 @@ function setPrayerCountDown(nextPrayer)
         tmp.style.backgroundColor = COLOR;
     else
         tmp.style.backgroundColor = null;
+  }
+}
+
+//Function to initialize the footer
+function initFooter() {
+  //Get the footer element
+  var footer = byId(FOOTER_ID);
+  //Set the copyright label
+  if (footer){
+    //Get the current year
+    var year = new Date().getFullYear();
+    //Modify the label
+    footer.innerHTML = "&copy; "+year+", AKALIA Slimane";
   }
 }

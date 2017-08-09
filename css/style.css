@@ -175,3 +175,8 @@ div.tab button.active {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
+.copyright a, .copyright a:hover
+{
+    color: white;
+}
