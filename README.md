@@ -33,4 +33,4 @@ The prayer calculations are based off [PrayTimes library](http://praytimes.org/)
 
 ## Authors
 * [Slimane Akalia](https://linkedin.com/in/slimaneakalia/)
-* [Hamza Faraji](https://twitter.com/faraji07)
+* [Hamza Faraji](https://twitter.com/farajist)
